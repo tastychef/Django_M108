@@ -6,7 +6,7 @@ menu = [
     {'title': 'О сайте', 'url_name': 'about'},
     {'title': 'Добавление нового проекта', 'url_name': 'addproject'},
     {'title': 'Обратная связь', 'url_name': 'feedback'},
-    {'title': 'Аторизация', 'url_name': 'login'},
+    {'title': 'Авторизация', 'url_name': 'login'},
 ]
 
 data_db = [
