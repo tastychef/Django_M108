@@ -1,23 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-</head>
-<body>
-<ul>
-    <li><a href="{% url 'home' %}">Главная страница</a></li>
-    {% for m in menu %}
-    {% if not foloop.last %}
-    <li>{% else %}</li>
-    <li> class='last'>
-    {% endif %}
-        <a href="{% url m.url_name %}">{{ m.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
-<h1>{{ title }}</h1>
+{% extends 'base.html' %}
 
+{% block content %}
+<h1>{{ title }}</h1>
+{% include 'realty/includes/nav.html' %}
 <ul>
     {% for p in posts %}
     {% if p.is_published %}
@@ -32,5 +17,6 @@
     {% endif %}
     {% endfor %}
 </ul>
+{% endblock %}
 </body>
 </html>
